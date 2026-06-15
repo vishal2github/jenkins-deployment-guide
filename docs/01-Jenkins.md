@@ -29,8 +29,8 @@ Security Group → Add rule:
 `jenkins --version`
 
 `sudo systemctl start jenkins`  
-`sudo systemctl enable Jenkins`  
-`sudo systemctl status Jenkins`
+`sudo systemctl enable jenkins`  
+`sudo systemctl status jenkins`
 
 ---
 

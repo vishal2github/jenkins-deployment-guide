@@ -14,14 +14,14 @@ pipeline {
     agent any
 
     environment {
-        PATH = "$PATH:/opt/apache-maven-3.9.15/bin"
+        PATH = "$PATH:/opt/apache-maven-3.9.16/bin"
     }
 
     stages {
         stage('Checkout Code') {
             steps {
                 git branch: 'main',
-                url: 'https://github.com/<githubUser>/<Project-App.git>'
+                url: 'https://github.com/<github_user>/<repo_name>'
             }
         }
 
@@ -33,7 +33,7 @@ pipeline {
 
         stage('SonarQube Analysis') {
             steps {
-                withSonarQubeEnv("Sonar-Server-9.9") {     // 'sonarqube-9.9.0.65466' is the extracted folder of SonarQube in instance
+                withSonarQubeEnv("sonarqube-9.9.3.79811") {     // 'sonarqube-9.9.3.79811' is the extracted folder of SonarQube in instance
                     sh 'mvn sonar:sonar'
                 }
             }

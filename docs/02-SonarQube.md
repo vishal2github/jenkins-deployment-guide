@@ -16,8 +16,8 @@ Security group rules:
 
 `sudo yum update -y`
 
-`sudo yum install wget -y`  
-`sudo yum install zip -y`
+`sudo yum install wget -y` (If not pre-installed)  
+`sudo yum install zip -y` (If not pre-installed)
 
 `sudo yum install java-17-openjdk` or `sudo yum install -y java-17-amazon-corretto-devel`  
 `java --version`
@@ -43,7 +43,7 @@ Change ownership:
  - `chown -R sonar:sonar /opt/sonarqube-9.9.3.79811`
  - `chmod -R 755 /opt/sonarqube-9.9.3.79811`
 
-Modify 'visudo':
+Modify 'visudo' (Use `sudo EDITOR=vim visudo` for vim editor):
  - Go for line: ## Allow root to run any commands anywhere (Line No. 99)
  - Add line below root line: `sonar    ALL=(ALL)    NOPASSWD:ALL`
 
@@ -65,7 +65,8 @@ Default credentials window:
  - password: Default password is `admin`
  - Set new password
 
-SonarQube Homepage appears
+SonarQube Homepage appears  
+ - Update password
 
 ---
 
@@ -95,9 +96,11 @@ SonarQube servers:
  - Server authentication token:
    - Click '+ Add' button > Add Credentials
 				
- - Select 'Secret text' > Next
-   - Scope  : Global (Jenkins, nodes, items, all child items, etc)
-   - Secret : # Paste the token created in Step-5: SonarQube webpage > Administrator > Security
+   - Select 'Secret text' > Next
+     - Scope  : Global (Jenkins, nodes, items, all child items, etc)
+     - Secret : # Paste the token created in Step-5: SonarQube webpage > Administrator > Security
+  
+   - Finally select the created token from dropdown menu
 
 Apply and Save
 
