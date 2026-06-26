@@ -16,7 +16,7 @@ Security group rules:
 
 `sudo apt update -y`
 	
-`sudo yum install java-17-openjdk -y`  
+`sudo yum install openjdk-17-jdk -y`  
 `java --version`
 	
 `sudo apt install wget -y`  
@@ -63,7 +63,7 @@ Access 'Manager App' webpage to verify proper working of Tomcat server
 ### Step-5 (Jenkins Credentials for Tomcat)
 
 In Jenkins server > Log into Jenkins webpage  
-Manage Jenkins > Security > Credentials
+Manage Jenkins > Credentials
 
 Add Credentials:
  - Select 'SSH Username with private key'
