@@ -1,4 +1,4 @@
-# 🚀 CI/CD Pipeline: Jenkins • SonarQube • Tomcat
+# 🚀 CI/CD Deployment Guide: Jenkins • SonarQube • Tomcat
 
 ![CI/CD](https://img.shields.io/badge/CI%2FCD-Automation-blue)
 ![Jenkins](https://img.shields.io/badge/Jenkins-Used-red)
@@ -9,7 +9,7 @@
 
 ## 📌 Overview
 
-End-to-end **CI/CD pipeline project** that automates build, code analysis, and deployment of a Java application using Jenkins, SonarQube, and Apache Tomcat.
+**CI/CD Deployment Guide** that helps in automates build, code analysis, and deployment of a Java application using Jenkins, SonarQube, and Apache Tomcat.
 
 
 ## ☁️ Infrastructure (AWS)
@@ -53,7 +53,7 @@ Developer → GitHub → AWS EC2 (Jenkins) → AWS EC2 (SonarQube) → AWS EC2 (
 ## 📁 Project Structure
 
 ```
-jenkins-sonarqube-tomcat-cicd/
+jenkins-deployment-guide/
 ├── docs/
 ├── screenshots/
 ├── utilities/
